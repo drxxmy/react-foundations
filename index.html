@@ -13,9 +13,15 @@
             }
 
             function HomePage(){
+                const users = ['User1', 'User2', 'User3'];
                 return <div>
                     <Header title="Example" />
                     <Header />
+                    <ul>
+                        {users.map((user) => (
+                            <li>{user}</li>
+                        ))}
+                    </ul>
                 </div>;
             }
 
