@@ -14,6 +14,14 @@
 
             function HomePage(){
                 const users = ['User1', 'User2', 'User3'];
+                const [counter, setCounter] = React.useState(0);
+
+                function handleClick() {
+                    let newValue = counter + 1
+                    setCounter(newValue);
+                    console.log("Current counter value: " + newValue);
+                }
+
                 return <div>
                     <Header title="Example" />
                     <Header />
@@ -22,6 +30,7 @@
                             <li>{user}</li>
                         ))}
                     </ul>
+                    <button onClick={handleClick}>Increment ({counter})</button>
                 </div>;
             }
 
