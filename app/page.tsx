@@ -1,6 +1,4 @@
-"use client"
-
-import { useState } from 'react';
+import IncrementButton from "./components/increment-button";
 
 function Header({ title }) {
   return <h1>{title ? title : "Default title"}</h1>;
@@ -8,13 +6,6 @@ function Header({ title }) {
 
 export default function HomePage() {
   const users = ['User1', 'User2', 'User3'];
-  const [counter, setCounter] = useState(0);
-
-  function handleClick() {
-    let newValue = counter + 1
-    setCounter(newValue);
-    console.log("Current counter value: " + newValue);
-  }
 
   return <div>
     <Header title="Example" />
@@ -23,6 +14,6 @@ export default function HomePage() {
         <li key={user}>{user}</li>
       ))}
     </ul>
-    <button onClick={handleClick}>Increment ({counter})</button>
+    <IncrementButton />
   </div>;
 }
