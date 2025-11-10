@@ -8,13 +8,14 @@
         <script type="text/jsx">
             const app = document.getElementById('app');
 
-            function Header(){
+            function Header(props){
+                console.log(props); // {title: Example}
                 return <h1>Hello world</h1>;
             }
 
             function HomePage(){
                 return <div>
-                    <Header />
+                    <Header title="Example" />
                 </div>;
             }
 
